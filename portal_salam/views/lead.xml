@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="pw_lead_action" model="ir.actions.act_window">
+            <field name="name">Action Name</field>
+            <field name="res_model">pw.lead</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="pw_lead_view_form" model="ir.ui.view">
+            <field name="name">pw.lead.view.form</field>
+            <field name="model">pw.lead</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <group name="CRM" string="CRM">
+
+                        <field name="display_name"></field>
+                        <field name="date_creation"></field>
+
+                        <field name="name"></field>
+                        <field name="phone"></field>
+                        <field name="email_from"></field>
+                        <field name="adress_siege"></field>
+                        <field name="nif"></field>
+                        <field name="rc"></field>
+                        <field name="num_compte"></field>
+                        <field name="date_ouverture_compte"></field>
+                        <field name="date_debut"></field>
+                        <field name="nom_arabe"></field>
+                        <field name="date_debut_activite"></field>
+                        <field name="activity_code"></field>
+                        <field name="activity_description"></field>
+                        <field name="activite_sec"></field>
+                        <field name="classification"></field>
+                        <field name="forme_jur"></field>
+                        <field name="chiffre_affaire"></field>
+                        <field name="chiffre_affaire_creation"></field>
+                        <field name="demande"></field>
+                        <field name="explanation"></field>
+                        <field name="description_company"></field>
+
+                        <field name="apropos"></field>
+                        <field name="gestion"></field>
+                        <field name="tailles"></field>
+                        <field name="fournisseurs"></field>
+                        <field name="clients"></field>
+                        <field name="situations"></field>
+                        <field name="companies"></field>
+
+
+                        <field name="documents"></field>
+
+
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="pw_lead_view_tree" model="ir.ui.view">
+            <field name="name">pw.lead.view.tree</field>
+            <field name="model">pw.lead</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="display_name"></field>
+
+                </tree>
+            </field>
+        </record>
+    </data>
+
+    <menuitem
+        id="pw_lead_menu"
+        name="Ponctual Leads"
+        action="pw_lead_action"
+        sequence="10" />
+
+
+</odoo>

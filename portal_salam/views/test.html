@@ -1,0 +1,427 @@
+<div class="d-flex flex-column align-items-center">
+  <div class="col-md-12">
+    <div class="bg-light p-3 rounded shadow-sm mb-4">
+      <h5>معلومات أساسية</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="name">اسم المتعامل</label>
+            <input
+              type="text"
+              name="name"
+              t-att-value="state.formData.name"
+              class="form-control"
+              required="required"
+              t-on-keyup="handleChange"
+              placeholder="أدخل اسم المتعامل"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="nom_arabe">الاسم بالاحرف العربية</label>
+            <input
+              type="text"
+              name="nom_arabe"
+              t-att-value="state.formData.nom_arabe"
+              class="form-control"
+              required="required"
+              t-on-keyup="handleChange"
+              placeholder="أدخل الاسم بالأحرف العربية"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light p-3 rounded shadow-sm mb-4">
+      <h5>معلومات الاتصال</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="phone">رقم الهاتف</label>
+            <input
+              type="text"
+              name="phone"
+              t-att-value="state.formData.phone"
+              class="form-control"
+              required="required"
+              t-on-keyup="handleChange"
+              placeholder="أدخل رقم الهاتف"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="email_from">البريد الإلكتروني</label>
+            <input
+              type="text"
+              name="email_from"
+              t-att-value="state.formData.email_from"
+              class="form-control"
+              required="required"
+              t-on-keyup="handleChange"
+              placeholder="أدخل البريد الإلكتروني"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="siteweb">الموقع الإلكتروني</label>
+            <input
+              type="text"
+              name="siteweb"
+              t-att-value="state.formData.siteweb"
+              class="form-control"
+              placeholder="مثال: www.example.com"
+              required="required"
+              t-on-keyup="handleChange"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="adress_siege">عنوان المقر الاجتماعي</label>
+            <input
+              type="text"
+              name="adress_siege"
+              t-att-value="state.formData.adress_siege"
+              class="form-control"
+              required="required"
+              t-on-keyup="handleChange"
+              placeholder="أدخل عنوان المقر الاجتماعي"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light p-3 rounded shadow-sm mb-4">
+      <h5>تفاصيل التسجيل التجاري</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="nif">رقم التعريف الضريبي (NIF)</label>
+            <input
+              type="text"
+              name="nif"
+              t-att-value="state.formData.nif"
+              class="form-control"
+              required="required"
+              t-on-keyup="handleChange"
+              placeholder="أدخل رقم التعريف الضريبي"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="rc">رقم السجل التجاري (RC)</label>
+            <input
+              type="text"
+              name="rc"
+              t-att-value="state.formData.rc"
+              class="form-control"
+              required="required"
+              t-on-keyup="handleChange"
+              placeholder="أدخل رقم السجل التجاري"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="num_compte">رقم الحساب</label>
+            <input
+              type="text"
+              name="num_compte"
+              t-att-value="state.formData.num_compte"
+              class="form-control"
+              required="required"
+              t-on-keyup="handleChange"
+              placeholder="أدخل رقم الحساب"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="date_ouverture_compte">تاريخ فتح الحساب</label>
+            <input
+              type="date"
+              name="date_ouverture_compte"
+              t-att-value="state.formData.date_ouverture_compte"
+              class="form-control"
+              required="required"
+              t-on-change="handleChange"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="date_debut">تاريخ تأسيس الشركة</label>
+            <input
+              type="date"
+              name="date_debut"
+              t-att-value="state.formData.date_debut"
+              class="form-control"
+              required="required"
+              t-on-change="handleChange"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="date_debut_activite">تاريخ بداية النشاط</label>
+            <input
+              type="date"
+              name="date_debut_activite"
+              t-att-value="state.formData.date_debut_activite"
+              class="form-control"
+              required="required"
+              t-on-change="handleChange"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light p-3 rounded shadow-sm mb-4">
+      <h5>معلومات النشاط</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="classification">التصنيف</label>
+            <select
+              name="classification"
+              id="classification"
+              class="form-control link-style"
+              t-att-value="state.formData.classification"
+              t-on-change="handleChange"
+            >
+              <option value="" disabled="1" selected="1">اختر التصنيف</option>
+              <t
+                t-foreach="props.data.classifications"
+                t-as="classification"
+                t-key="classification.id"
+              >
+                <option t-att-value="classification.id">
+                  <t
+                    t-esc="classification.name"
+                    t-att-value="classification.id"
+                  />
+                </option>
+              </t>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="forme_jur">الشكل القانوني</label>
+            <select
+              name="forme_jur"
+              id="forme_jur"
+              class="form-control link-style"
+              t-att-value="state.formData.forme_jur"
+              t-on-change="handleChange"
+            >
+              <option value="" disabled="1" selected="1">
+                اختر الشكل القانوني
+              </option>
+              <t
+                t-foreach="props.data.forme_jurs"
+                t-as="forme_jur"
+                t-key="forme_jur.id"
+              >
+                <option t-att-value="forme_jur.id">
+                  <t t-esc="forme_jur.name" t-att-value="forme_jur.id" />
+                </option>
+              </t>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="activite">النشاط الرئيسي حسب بنك الجزائر</label>
+            <select
+              name="activite"
+              class="form-control link-style"
+              t-att-value="state.formData.activite"
+              t-on-change="handleChange"
+            >
+              <option value="" disabled="1" selected="1">
+                اختر النشاط الرئيسي
+              </option>
+              <t
+                t-foreach="props.data.activities"
+                t-as="activite"
+                t-key="activite.id"
+              >
+                <option t-att-value="activite.id">
+                  <t t-esc="activite.name" />
+                </option>
+              </t>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="activity_code">رمز النشاط حسب السجل التجاري</label>
+            <input
+              type="text"
+              name="activity_code"
+              t-att-value="state.formData.activity_code"
+              class="form-control"
+              required="required"
+              t-on-keyup="handleChange"
+              placeholder="أدخل رمز النشاط"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="activity_description">النشاط حسب السجل التجاري</label>
+            <input
+              type="text"
+              name="activity_description"
+              t-att-value="state.formData.activity_description"
+              class="form-control"
+              required="required"
+              t-on-keyup="handleChange"
+              placeholder="أدخل وصف النشاط"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="activite_sec"
+              >رمز النشاط الثانوي في السجل التجاري</label
+            >
+            <input
+              type="text"
+              name="activite_sec"
+              t-att-value="state.formData.activite_sec"
+              class="form-control"
+              required="required"
+              t-on-keyup="handleChange"
+              placeholder="أدخل رمز النشاط الثانوي"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="date_inscription">تاريخ القيد في السجل التجاري</label>
+            <input
+              type="date"
+              name="date_inscription"
+              t-att-value="date_inscription"
+              t-on-change="handleChange"
+              class="form-control"
+              required="required"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light p-3 rounded shadow-sm mb-4">
+      <h5>المعلومات المالية</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="chiffre_affaire">رقم الأعمال</label>
+            <input
+              type="number"
+              name="chiffre_affaire"
+              t-att-value="state.formData.chiffre_affaire"
+              class="form-control"
+              required="required"
+              t-on-keyup="handleChange"
+              placeholder="أدخل رقم الأعمال"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="chiffre_affaire_creation"
+              >رقم الأعمال عند الإنشاء</label
+            >
+            <input
+              type="number"
+              name="chiffre_affaire_creation"
+              t-att-value="state.formData.chiffre_affaire_creation"
+              class="form-control"
+              t-on-keyup="handleChange"
+              placeholder="أدخل رقم الأعمال عند الإنشاء"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light p-3 rounded shadow-sm mb-4">
+      <h5>معلومات الطلب</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="demande">الطلب</label>
+            <select
+              name="demande"
+              id="demande"
+              class="form-control link-style"
+              t-att-value="state.formData.demande"
+              t-on-change="handleChange"
+            >
+              <option value="" disabled="1" selected="1">اختر الطلب</option>
+              <t
+                t-foreach="props.data.demandes"
+                t-as="demande"
+                t-key="demande.id"
+              >
+                <option t-att-value="demande.id">
+                  <t t-esc="demande.name" />
+                </option>
+              </t>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+      <div class="form-group">
+        <label for="explanation">الغرض من الطلب</label>
+        <textarea
+          id="explanation"
+          name="explanation"
+          class="form-control"
+          rows="5"
+          required="required"
+          t-att-value="state.formData.explanation"
+          t-on-keyup="handleChange"
+          placeholder="أدخل الغرض من الطلب"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="description_company">تعريف الشركة</label>
+        <textarea
+          id="description_company"
+          name="description_company"
+          class="form-control"
+          rows="5"
+          required="required"
+          t-att-value="state.formData.description_company"
+          t-on-keyup="handleChange"
+          placeholder="أدخل تعريف الشركة"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+</div>
