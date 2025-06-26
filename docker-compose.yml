@@ -1,38 +1,25 @@
+version: '3.2'
 services:
   web:
-    build: .
-    image: odoo_ocr
-    command: odoo -u portal_salam --dev=reload
-    depends_on:
-      - db
+    image: odoo_salam:v1
     ports:
-      - '8888:8069'
+      - '8069:8069'
+      - '8072:8072'
     environment:
-      - HOST=db
+      - HOST=10.116.70.141
       - USER=odoo
       - PASSWORD=odoo
+      - PORT=5432
     volumes:
-      - ./.odoo-web-data:/var/lib/odoo
+      - /data/Odoo:/var/lib/odoo
+      - /etc/odoo:/etc/odoo
       - ./addons:/mnt/extra-addons
-      - ./config:/etc/odoo
-    develop:
-      watch:
-        - action: restart
-          path: ./addons
-          target: /mnt/extra-addons
-        - action: sync
-          path: ./config
-          target: /etc/odoo
+    command: >
+      /bin/bash -c "odoo -u all --stop-after-init && odoo"
 
-  db:
-    image: postgres:15
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_PASSWORD=odoo
-      - POSTGRES_USER=odoo
-      - PGDATA=/var/lib/postgresql/data/pgdata
-    volumes:
-      - ./.odoo-db-data:/var/lib/postgresql/data/pgdata
 volumes:
   odoo-web-data:
-  odoo-db-data:
+
+
+
+
