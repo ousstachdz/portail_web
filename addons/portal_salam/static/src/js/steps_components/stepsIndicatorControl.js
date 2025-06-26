@@ -185,7 +185,7 @@ class StepsIndicatorControl extends Component {
           console.error('Failed to send data:', response)
           return
         } else {
-          // state.step += 1
+          state.step += 1
           console.log('Data sent successfully')
         }
 
