@@ -1,0 +1,11 @@
+<!-- my_module/views/custom_login.xml -->
+<odoo>
+  <template id="login" inherit_id="web.login" name="Custom Login">
+    <xpath expr="//div[hasclass('field-login')]" position="before">
+      <div class="container">
+        <div class="d-flex justify-content-center">
+        </div>
+      </div>
+    </xpath>
+  </template>
+</odoo>

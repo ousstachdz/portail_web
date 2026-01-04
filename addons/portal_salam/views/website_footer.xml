@@ -1,0 +1,12 @@
+<odoo>
+  <template id="custom_website_footer" inherit_id="website.footer_custom">
+    <xpath expr="//div[@id='footer']" position="replace">
+      <div></div>
+    </xpath>
+  </template>
+  <template id="custom_website_footer_after" inherit_id="website.footer_copyright_company_name">
+    <xpath expr="//footer//div[hasclass('o_footer_copyright')]" position="replace">
+      <div></div>
+    </xpath>
+  </template>
+</odoo>

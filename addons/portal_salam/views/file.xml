@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="fw_document_action" model="ir.actions.act_window">
+        <field name="name">Action Name</field>
+        <field name="res_model">fw.document</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="fw_document_view_form" model="ir.ui.view">
+        <field name="name">fw.document.view.form</field>
+        <field name="model">fw.document</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="filename"></field>
+                        <field name="document"></field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="fw_document_view_tree" model="ir.ui.view">
+        <field name="name">fw.document.view.tree</field>
+        <field name="model">fw.document</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="filename"></field>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem
+        id="wf_document_menu"
+        name="Docs"
+        action="fw_document_action"
+        sequence="10" />
+</odoo>

@@ -1,0 +1,9 @@
+<!-- my_module/views/website_navbar.xml -->
+<odoo>
+  <template id="custom_website_navbar" inherit_id="website.layout">
+    <xpath expr="//header" position="replace">
+      <header id="top" class="">
+      </header>
+    </xpath>
+  </template>
+</odoo>
